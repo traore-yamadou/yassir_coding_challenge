@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies List Controller-->
+        <scene sceneID="FqI-Jc-054">
+            <objects>
+                <tableViewController storyboardIdentifier="MoviesListController" id="bla-Eh-FoO" customClass="MoviesListController" customModule="yassir_coding_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VKA-Y3-N7H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <activityIndicatorView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" id="DCl-zh-AYd">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="150" id="qAU-SC-5UG" customClass="MovieCell" customModule="yassir_coding_challenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qAU-SC-5UG" id="N2Y-LK-vR1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R64-Qb-qrl">
+                                            <rect key="frame" x="20" y="20" width="80" height="110"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="HTZ-hw-jao"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pB4-Jg-BL4">
+                                            <rect key="frame" x="108" y="20" width="262" height="53"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oou-zv-dyP">
+                                            <rect key="frame" x="108" y="81" width="33" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pB4-Jg-BL4" firstAttribute="top" secondItem="R64-Qb-qrl" secondAttribute="top" id="FXt-Xd-2iN"/>
+                                        <constraint firstItem="pB4-Jg-BL4" firstAttribute="leading" secondItem="R64-Qb-qrl" secondAttribute="trailing" constant="8" symbolic="YES" id="HFM-OH-489"/>
+                                        <constraint firstItem="oou-zv-dyP" firstAttribute="top" secondItem="pB4-Jg-BL4" secondAttribute="bottom" constant="8" symbolic="YES" id="Nkr-Di-Tne"/>
+                                        <constraint firstAttribute="bottom" secondItem="R64-Qb-qrl" secondAttribute="bottom" constant="20" symbolic="YES" id="P8X-XB-Y64"/>
+                                        <constraint firstItem="R64-Qb-qrl" firstAttribute="top" secondItem="N2Y-LK-vR1" secondAttribute="top" constant="20" symbolic="YES" id="SRK-LJ-Go5"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="pB4-Jg-BL4" secondAttribute="trailing" constant="24" id="fBg-8d-ot9"/>
+                                        <constraint firstItem="R64-Qb-qrl" firstAttribute="leading" secondItem="N2Y-LK-vR1" secondAttribute="leading" constant="20" symbolic="YES" id="lIM-ZB-MbT"/>
+                                        <constraint firstItem="oou-zv-dyP" firstAttribute="leading" secondItem="pB4-Jg-BL4" secondAttribute="leading" id="pIa-UB-5K1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="releaseDateLabel" destination="oou-zv-dyP" id="LbI-jq-egX"/>
+                                    <outlet property="thumbnail" destination="R64-Qb-qrl" id="mS5-k4-AEu"/>
+                                    <outlet property="titleLabel" destination="pB4-Jg-BL4" id="yCO-eZ-AaT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bla-Eh-FoO" id="kpv-U5-UWi"/>
+                            <outlet property="delegate" destination="bla-Eh-FoO" id="1Ie-fS-Fy4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HEa-f2-RBs"/>
+                    <connections>
+                        <outlet property="activitIndicator" destination="DCl-zh-AYd" id="uGB-Gl-Zbk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdT-dH-m6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="52.901785714285715"/>
+        </scene>
+        <!--Movie Detail Controller-->
+        <scene sceneID="vTh-f8-XX2">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailController" id="FQG-qT-klZ" customClass="MovieDetailController" customModule="yassir_coding_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0X3-kB-XjH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s54-Sw-VoA">
+                                <rect key="frame" x="92" y="76" width="230" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="YdL-QB-4gw"/>
+                                    <constraint firstAttribute="width" constant="230" id="sGo-7f-u0L"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Shawshank Redemption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-DN-oeV">
+                                <rect key="frame" x="20" y="358" width="194" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1994" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYt-Ni-8zj">
+                                <rect key="frame" x="20" y="419" width="194" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dg6-lX-NPr">
+                                <rect key="frame" x="20" y="444" width="378" height="418"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="siG-xX-TZJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s54-Sw-VoA" firstAttribute="top" secondItem="siG-xX-TZJ" secondAttribute="top" constant="32" id="2DD-92-EQn"/>
+                            <constraint firstItem="s54-Sw-VoA" firstAttribute="centerX" secondItem="0X3-kB-XjH" secondAttribute="centerX" id="50B-0N-aZX"/>
+                            <constraint firstItem="Dg6-lX-NPr" firstAttribute="leading" secondItem="GLF-DN-oeV" secondAttribute="leading" id="5H4-5L-mfY"/>
+                            <constraint firstItem="GLF-DN-oeV" firstAttribute="leading" secondItem="0X3-kB-XjH" secondAttribute="leading" constant="20" symbolic="YES" id="92v-K6-hpr"/>
+                            <constraint firstItem="aYt-Ni-8zj" firstAttribute="leading" secondItem="GLF-DN-oeV" secondAttribute="leading" id="D8D-vo-TYh"/>
+                            <constraint firstItem="aYt-Ni-8zj" firstAttribute="top" secondItem="GLF-DN-oeV" secondAttribute="bottom" constant="8" symbolic="YES" id="Jdo-ew-H9p"/>
+                            <constraint firstItem="siG-xX-TZJ" firstAttribute="trailing" secondItem="GLF-DN-oeV" secondAttribute="trailing" constant="200" id="Og2-eF-IJP"/>
+                            <constraint firstItem="GLF-DN-oeV" firstAttribute="top" secondItem="s54-Sw-VoA" secondAttribute="bottom" constant="32" id="cqr-XX-JKG"/>
+                            <constraint firstItem="Dg6-lX-NPr" firstAttribute="top" secondItem="aYt-Ni-8zj" secondAttribute="bottom" constant="8" symbolic="YES" id="kOx-Su-Wpg"/>
+                            <constraint firstItem="siG-xX-TZJ" firstAttribute="trailing" secondItem="Dg6-lX-NPr" secondAttribute="trailing" constant="16" id="lUM-Ws-y3f"/>
+                            <constraint firstItem="siG-xX-TZJ" firstAttribute="bottom" secondItem="Dg6-lX-NPr" secondAttribute="bottom" id="oK9-NV-Wck"/>
+                            <constraint firstItem="aYt-Ni-8zj" firstAttribute="trailing" secondItem="GLF-DN-oeV" secondAttribute="trailing" id="unY-sr-K0A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GwO-zz-gjM"/>
+                    <connections>
+                        <outlet property="overviewTextview" destination="Dg6-lX-NPr" id="v8P-1M-vf4"/>
+                        <outlet property="releaseDateLabel" destination="aYt-Ni-8zj" id="8Q3-pD-bSQ"/>
+                        <outlet property="thumbnail" destination="s54-Sw-VoA" id="ver-vZ-l1l"/>
+                        <outlet property="titleLabel" destination="GLF-DN-oeV" id="Y4q-yO-Z4t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIc-TN-ZdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

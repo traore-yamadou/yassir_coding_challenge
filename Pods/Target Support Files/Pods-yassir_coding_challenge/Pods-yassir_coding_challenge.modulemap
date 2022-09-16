@@ -1,0 +1,6 @@
+framework module Pods_yassir_coding_challenge {
+  umbrella header "Pods-yassir_coding_challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

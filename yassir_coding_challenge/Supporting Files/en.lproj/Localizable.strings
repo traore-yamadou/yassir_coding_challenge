@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  yassir_coding_challenge
+
+  Created by Yamadou Traore on 15/09/2022.
+  
+ /* No comment provided by engineer. */
+"MOVIES" = "Movies";
+
+/* No comment provided by engineer. */
+"LOAD_MOVIES_ERROR" = "Sorry, we couldn't complete your request. Please try again in a moment. If the problem persists, contact customer support.";
+
+/* Dismiss the alert */
+"DISMISS" = "Dismiss";
+
+/* No comment provided by engineer. */
+"ERROR" = "Error";
+
